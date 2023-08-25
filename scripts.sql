@@ -60,13 +60,17 @@ from Containers;
 
 select concat('[', @ContainersJSON, ']') as ContainersJSON;
 
+declare @ContainerId int;
 declare @OperationsJSON nvarchar(max);
+
+set @ContainerId = 1;
 
 select @OperationsJSON = coalesce(@OperationsJSON + ', ', '') + 
 	concat('{"id": ', Id, ', "containerId": ', ContainerId, ', "beginDate": "', format(BeginDate, 'yyyy/MM/dd HH:mm:ss'), '", "endDate": "', format(EndDate, 'yyyy/MM/dd HH:mm:ss'), 
 		'", "type": "', [Type], '", "operatorName": "', OperatorName, '", "inspectionLocation": "', InspectionLocation, '"}'
 	)
-from Operations;
+from Operations
+where ContainerId = @ContainerId;
 
 select concat('[', @OperationsJSON, ']') as OperationsJSON;
 

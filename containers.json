@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "number": 789,
+    "type": "Medium",
+    "length": 12.5,
+    "width": 4,
+    "height": 3,
+    "weight": 900,
+    "empty": 0,
+    "receiptDate": "2023/08/24 13:56:00"
+  },
+  {
+    "id": 2,
+    "number": 356,
+    "type": "Small",
+    "length": 6,
+    "width": 3,
+    "height": 2,
+    "weight": 100,
+    "empty": 1,
+    "receiptDate": "2023/08/24 13:56:00"
+  },
+  {
+    "id": 3,
+    "number": 999,
+    "type": "Large",
+    "length": 18,
+    "width": 6,
+    "height": 5,
+    "weight": 1500,
+    "empty": 0,
+    "receiptDate": "2023/08/24 13:56:00"
+  }
+]
